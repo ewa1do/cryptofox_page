@@ -1,2 +1,5 @@
 export * from './Nav'
 export * from './HeroTitle'
+export * from './About'
+export * from './Header'
+export * from './Topics'
