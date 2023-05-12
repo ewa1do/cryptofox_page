@@ -7,7 +7,10 @@ const { rubik, press_start_2p } = fonts()
 
 export function Topics() {
     return (
-        <section className={`${rubik.className} md: py-24 px-10 text-shade`}>
+        <section
+            className={`hidden ${rubik.className} md:py-24 px-10 text-shade`}
+            id="topics"
+        >
             <div className="flex flex-col items-center mb-12">
                 <h3 className={`md: text-6xl text-royalBlue pb-2`}>
                     Discussion Topics:

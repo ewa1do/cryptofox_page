@@ -3,33 +3,30 @@ import { fonts } from '@/utilities'
 
 const { press_start_2p, rubik } = fonts()
 
+import classes from '../styles/header.module.css'
+
 export function HeroTitle() {
     return (
-        <div
-            style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                width: '100vw',
-            }}
-            className={`md: text-primary mt-20`}
+        <section
+            className={`${classes.section} grid grid-cols-1 place-items-center text-primary mt-20 md:mt-28 xl:mt-32 2xl:mt-48`}
         >
             <h5
-                className={`${rubik.className} md: flex justify-center my-3 text-xl`}
+                className={`${rubik.className} text-[10px] sm:text-sm md:text-xl xl:text-2xl my-2 lg:my-4 `}
             >
                 July 10, 2023 6:30 pm - Dubai, ATLANTIS, THE PALM.{' '}
             </h5>
             <h1
-                className={`${rubik.className} text-4xl flex justify-center my-8`}
+                className={`${press_start_2p.className} flex flex-col items-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl pb-3`}
             >
-                <span className={`${press_start_2p.className} px-4`}>
-                    CryptoFOX{'  '}
+                CryptoFOX
+                <span
+                    className={`${rubik.className} text-sm sm:text-md md:text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl`}
+                >
+                    Where Innovation Meets Opportunity
                 </span>{' '}
-                Where Innovation Meets Opportunity
             </h1>
             <h3
-                className={`${rubik.className} text-center my-4 text-2xl w-3/6 ml-[25%]`}
+                className={`${rubik.className}  text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl my-4 w-5/6 sm:w-4/6 lg:w-3/6`}
             >
                 The premier blockchain conference, where industry leaders and
                 experts converge to{' '}
@@ -37,11 +34,13 @@ export function HeroTitle() {
                     Redefine the World of Crypto.
                 </span>
             </h3>
-            <div className={`ml-[49%] mt-32`}>
-                <i className={`text-6xl font-thin`}>
+            <div className={`mt-32`}>
+                <i
+                    className={`text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-thin`}
+                >
                     <BsChevronDown />
                 </i>
             </div>
-        </div>
+        </section>
     )
 }

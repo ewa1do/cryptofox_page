@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { About, Header, Speakers, Sponsors, Topics } from '@/components'
 
 export default function Home() {

@@ -8,7 +8,8 @@ const { rubik } = fonts()
 export function Speakers() {
     return (
         <section
-            className={`${classes.section} ${rubik.className} text-gray py-24`}
+            className={`hidden ${classes.section} ${rubik.className} text-gray py-24`}
+            id="speakers"
         >
             <div className="flex flex-col items-center mb-12">
                 <h3 className={`md: text-6xl text-gray pb-2`}>
