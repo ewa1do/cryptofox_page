@@ -5,12 +5,18 @@ const { rubik } = fonts()
 export function About() {
     return (
         <section
-            className={`hidden ${rubik.className} md:grid place-items-center w-screen py-24 bg-[#e8e9ec]`}
+            className={`${rubik.className} grid place-items-center w-screen py-12 md:py-24 bg-[#e8e9ec]`}
             id="about"
         >
-            <h3 className={`md: text-6xl text-royalBlue pb-4`}>Who We Are</h3>
+            <h3
+                className={`text-3xl sm:text-5xl font-normal md:text-6xl text-royalBlue pb-4`}
+            >
+                Who We Are
+            </h3>
 
-            <article className={`md: w-3/6 text-xl text-shade`}>
+            <article
+                className={`px-4 text-sm md:text-xl xl:text-2xl md:w-4/6 lg:w-3/6 text-shade`}
+            >
                 <p className={`py-4`}>
                     CryptoFOX is the blockchain conference network bringing
                     together the key players of crypto industry and experts to
