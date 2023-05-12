@@ -10,7 +10,7 @@ export function Topics() {
         <section className={`${rubik.className} md: py-24 px-10 text-shade`}>
             <div className="flex flex-col items-center mb-12">
                 <h3 className={`md: text-6xl text-royalBlue pb-2`}>
-                    Discussion Topics
+                    Discussion Topics:
                 </h3>
                 <h5 className={`md: text-2xl text-royalBlue`}>
                     Identifying the gamechanging trends in the web 3.0 ecosystem

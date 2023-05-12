@@ -12,7 +12,7 @@ export function Speakers() {
         >
             <div className="flex flex-col items-center mb-12">
                 <h3 className={`md: text-6xl text-gray pb-2`}>
-                    Crypto Visionaries
+                    Crypto Visionaries:
                 </h3>
                 <h5 className={`md: text-2xl text-gray`}>
                     Inspiring Talks on the Future of Digital Finance
