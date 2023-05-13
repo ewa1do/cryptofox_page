@@ -1,8 +1,8 @@
+import { BsMic } from 'react-icons/bs'
+
+import { Title } from '@/components'
 import { topics } from '@/lib'
 import { fonts } from '@/utilities'
-
-import { BsMic } from 'react-icons/bs'
-import { Title } from '@/components'
 
 const { rubik, press_start_2p } = fonts()
 
