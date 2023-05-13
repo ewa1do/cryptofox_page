@@ -7,7 +7,7 @@ const { rubik } = fonts()
 export function Sponsors() {
     return (
         <section
-            className={`hidden ${rubik.className} md: py-24 px-10 text-shade`}
+            className={`${rubik.className} md: py-24 px-10 text-shade`}
             id="sponsors"
         >
             <div className="flex flex-col items-center mb-12">
@@ -20,7 +20,7 @@ export function Sponsors() {
             </div>
 
             <article
-                className={`md: grid grid-cols-4 gap-x-10 gap-y-20 place-items-center`}
+                className={`md: grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-10 gap-y-20 place-items-center`}
             >
                 {sponsors().map((sponsor) => {
                     return (
