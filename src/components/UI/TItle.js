@@ -1,10 +1,14 @@
+import { fonts } from '@/utilities'
+
 export function Title(props) {
     const defaultColor = 'text-royalBlue'
 
     if (props.title && !props.subtitle) {
         return (
             <h3
-                className={`text-3xl sm:text-5xl font-normal md:text-6xl md:font-thin ${
+                className={`${
+                    fonts().press_start_2p.className
+                } text-2xl sm:text-4xl font-normal md:text-5xl md:font-thin ${
                     props.text_dark
                         ? 'text-royalBlue'
                         : props.text_light
@@ -29,11 +33,17 @@ export function Title(props) {
                 }`}
             >
                 <h3
-                    className={`text-2xl sm:text-5xl font-normal md:text-6xl md:font-thin pb-2`}
+                    className={`${
+                        fonts().press_start_2p.className
+                    } text-center text-xl sm:text-4xl md:text-5xl font-normal  md:font-thin pb-2`}
                 >
                     {props.title}
                 </h3>
-                <h5 className={`text-sm text-center md:text-2xl`}>
+                <h5
+                    className={`${
+                        fonts().vt323.className
+                    } text-sm sm:text-xl md:text-2xl xl:text-3xl text-center `}
+                >
                     {props.subtitle}
                 </h5>
             </div>

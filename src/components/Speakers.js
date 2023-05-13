@@ -26,7 +26,7 @@ export function Speakers() {
                     return (
                         <div
                             key={`speaker-${i + 1}`}
-                            className={`flex flex-col justify-around items-center border-gold_shade border-2 rounded-lg shadow-md shadow-royalBlue min-h-[12rem] md:min-h-[16rem] md:max-h-[16rem] xl:min-h-[16.5rem] min-w-[15rem] md:min-w-[16rem] xl:min-w-[16rem] max-w-[15rem] md:max-w-[16rem] md:p-2`}
+                            className={`flex flex-col justify-around items-center border-gold_shade border-2 rounded-lg shadow-md shadow-royalBlue min-h-[12rem] md:min-h-[16rem] md:max-h-[16rem] xl:min-h-[16rem] min-w-[15rem] md:min-w-[16rem] xl:min-w-[16rem] max-w-[15rem] md:max-w-[16rem] md:p-2`}
                         >
                             <Image
                                 src={speaker.img}

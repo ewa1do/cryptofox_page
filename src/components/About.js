@@ -1,4 +1,4 @@
-import { Title } from '@/components'
+import { Countdown, Title } from '@/components'
 import { fonts } from '@/utilities'
 
 export function About() {
@@ -42,6 +42,7 @@ export function About() {
                     </span>
                 </p>
             </article>
+            <Countdown />
         </section>
     )
 }
