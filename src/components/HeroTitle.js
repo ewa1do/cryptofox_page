@@ -8,7 +8,7 @@ import classes from '../styles/header.module.css'
 export function HeroTitle() {
     return (
         <section
-            className={`${classes.section} grid grid-cols-1 place-items-center text-primary mt-20 md:mt-28 xl:mt-32 2xl:mt-48`}
+            className={`${classes.section} grid grid-cols-1 place-items-center text-primary mt-20 md:mt-24 lg:mt-20 xl:mt-32 2xl:mt-48`}
         >
             <h5
                 className={`${rubik.className} text-[10px] sm:text-sm md:text-xl xl:text-2xl my-2 lg:my-4 `}
@@ -34,7 +34,7 @@ export function HeroTitle() {
                     Redefine the World of Crypto.
                 </span>
             </h3>
-            <div className={`mt-32`}>
+            <div className={`md:mt-28 lg:mt-10`}>
                 <i
                     className={`text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-thin`}
                 >

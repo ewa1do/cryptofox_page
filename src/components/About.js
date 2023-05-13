@@ -12,7 +12,7 @@ export function About() {
             <Title title="Who We Are" />
 
             <article
-                className={`px-4 text-sm md:text-xl xl:text-2xl md:w-4/6 lg:w-3/6 text-shade`}
+                className={`px-4 text-sm md:text-lg lg:text-xl md:w-3/6 text-shade`}
             >
                 <p className={`py-4`}>
                     CryptoFOX is the blockchain conference network bringing
