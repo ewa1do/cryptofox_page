@@ -37,7 +37,7 @@ export function Speakers() {
                             />
 
                             <h3 className="my-2 text-lg">{speaker.name}</h3>
-                            <h5 className="px-6 my-2 text-center text-base">
+                            <h5 className="px-6 my-2 text-center text-base md:text-sm">
                                 {speaker.charge} @{' '}
                                 <span className="text-gold">
                                     {speaker.company}

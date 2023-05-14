@@ -12,7 +12,7 @@ export function Hamburger() {
                     className="mobile-menu-button"
                     onClick={toggleMenu}
                 >
-                    <i>
+                    <i className="text-gold_shade">
                         <GiHamburgerMenu />
                     </i>
                 </button>
