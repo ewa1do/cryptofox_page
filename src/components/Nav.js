@@ -1,28 +1,58 @@
-import { useState } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 import { CgCloseO } from 'react-icons/cg'
+import classes from '../styles/header.module.css'
 
 import { sections } from '@/lib'
 import { fonts } from '@/utilities'
 import { Hamburger, Logo } from '@/components'
 import { useMenuStore } from '@/store'
-import classes from '../styles/header.module.css'
 
 export function Nav(props) {
+    const [intersecting, setIntersecting] = useState(true)
     const { isMenuOpen, toggleMenu } = useMenuStore()
+
+    const navRef = useRef()
+
+    useLayoutEffect(() => {
+        const home = document.getElementById('home')
+        const hero = document.querySelector('.hero')
+        const navHeight = navRef?.current?.getBoundingClientRect().height
+
+        const navElements = Array.from(navRef?.current.children)
+
+        const observer = new IntersectionObserver(
+            (entries, observer) => {
+                const [entry] = entries
+
+                if (!entry.isIntersecting) {
+                    setIntersecting(false)
+                } else {
+                    setIntersecting(true)
+                }
+            },
+            {
+                root: null,
+                threshold: 0.5,
+                rootMargin: `-${navHeight}px`,
+            }
+        )
+
+        observer.observe(hero)
+    }, [])
 
     return (
         <nav
-            className={`flex items-center justify-between bg-transparent md:py-2 md:px-6 ${
-                !isMenuOpen ? 'px-2 pt-1' : ''
-            }`}
+            className={`flex items-center w-screen justify-between ${
+                intersecting ? ' bg-transparent' : 'bg-primary shadow-md'
+            } fixed top-0  md:py-2 md:px-6 ${!isMenuOpen ? 'px-2 pt-1' : ''}`}
+            ref={navRef}
         >
-            <Logo />
+            <Logo intersecting={intersecting} />
             <Hamburger />
             {isMenuOpen && (
                 <div
-                    className={`${fonts().rubik.className}  ${
-                        classes.nav
-                    } sm:hidden w-screen h-screen text-lg md:text-primary font-normal`}
+                    className={`${fonts().rubik.className}  ${classes.nav} 
+                    sm:hidden w-screen h-screen text-lg md:text-primary font-normal`}
                 >
                     <button
                         onClick={toggleMenu}
@@ -54,7 +84,11 @@ export function Nav(props) {
                     </ul>
                 </div>
             )}
-            <ul className="hidden sm:flex sm:justify-around text-gray">
+            <ul
+                className={`hidden sm:flex sm:justify-around ${
+                    intersecting ? 'text-gray' : 'text-complement'
+                } `}
+            >
                 {sections().map((section) => {
                     return (
                         <li

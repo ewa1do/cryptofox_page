@@ -9,7 +9,7 @@ const { rubik, press_start_2p } = fonts()
 export function Topics() {
     return (
         <section
-            className={`${rubik.className} py-12 md:py-24 px-10 text-shade`}
+            className={`${rubik.className} section section--hidden py-12 md:py-24 px-10 text-shade`}
             id="topics"
         >
             <Title

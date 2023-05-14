@@ -8,7 +8,7 @@ const { rubik } = fonts()
 export function Sponsors() {
     return (
         <section
-            className={`${rubik.className} py-20 md:py-24 px-10 text-shade`}
+            className={`${rubik.className} section section--fade py-20 md:py-24 px-10 text-shade`}
             id="sponsors"
         >
             <Title

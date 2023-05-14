@@ -10,7 +10,7 @@ const { rubik } = fonts()
 export function Speakers() {
     return (
         <section
-            className={`${classes.section} ${rubik.className} text-gray py-24`}
+            className={`${classes.section} ${rubik.className} section section--hidden text-gray py-24`}
             id="speakers"
         >
             <Title
@@ -37,7 +37,7 @@ export function Speakers() {
                             />
 
                             <h3 className="my-2 text-lg">{speaker.name}</h3>
-                            <h5 className="px-6 my-2 text-center text-base md:text-sm">
+                            <h5 className="px-6 my-2 text-center text-sm">
                                 {speaker.charge} @{' '}
                                 <span className="text-gold">
                                     {speaker.company}

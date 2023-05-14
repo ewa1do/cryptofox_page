@@ -8,7 +8,7 @@ import classes from '../styles/header.module.css'
 export function HeroTitle() {
     return (
         <section
-            className={`${classes.section} grid grid-cols-1 place-items-center text-primary mt-20 md:mt-24 lg:mt-20 xl:mt-32 2xl:mt-48`}
+            className={`${classes.section} grid grid-cols-1 place-items-center text-primary pt-20 md:pt-24 lg:pt-20 xl:pt-32 2xl:pt-48`}
         >
             <h5
                 className={`${rubik.className} text-[10px] sm:text-sm md:text-xl xl:text-2xl my-2 lg:my-4 `}
@@ -16,7 +16,7 @@ export function HeroTitle() {
                 July 10, 2023 6:30 pm - Dubai, ATLANTIS, THE PALM.{' '}
             </h5>
             <h1
-                className={`${press_start_2p.className} flex flex-col items-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl pb-3`}
+                className={`${press_start_2p.className} hero flex flex-col items-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl pb-3`}
             >
                 CryptoFOX
                 <span

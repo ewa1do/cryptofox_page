@@ -1,3 +1,4 @@
+import { useLayoutEffect, useRef } from 'react'
 import { DateTime } from 'luxon'
 import { IoCloseCircleOutline } from 'react-icons/io5'
 
@@ -7,6 +8,25 @@ import { fonts } from '@/utilities'
 import { useMenuStore } from '@/store'
 
 export function Countdown() {
+    const countdownRef = useRef()
+
+    useLayoutEffect(() => {
+        const sectionAbout = document.querySelectorAll('.section')[0]
+
+        const sectionObserver = new IntersectionObserver(
+            (entries, observer) => {
+                const [entry] = entries
+
+                if (entry.isIntersecting) {
+                    countdownRef?.current?.classList.remove('countdown--fade')
+                }
+            },
+            { root: null, threshold: 0.15 }
+        )
+
+        sectionObserver.observe(sectionAbout)
+    }, [])
+
     const { isCountdownOpen, closeCountdown } = useMenuStore()
 
     const eventDate = DateTime.fromObject(
@@ -27,7 +47,8 @@ export function Countdown() {
 
         return (
             <div
-                className={`flex justify-evenly items-center py-4 fixed bottom-0 bg-shade text-gray w-screen h-10 sm:h-12 md:h-16`}
+                ref={countdownRef}
+                className={`countdown countdown--fade flex justify-evenly items-center py-4 fixed bottom-0 bg-shade text-gray w-screen h-10 sm:h-12 md:h-16`}
             >
                 <h5
                     className={`hidden sm:flex sm:justify-center text-center sm:text-sm lg:text-xl ${

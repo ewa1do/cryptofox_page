@@ -6,7 +6,7 @@ export function About() {
         <section
             className={`${
                 fonts().rubik.className
-            } grid place-items-center w-screen py-12 md:py-24 bg-[#e8e9ec]`}
+            } section section--fade grid place-items-center w-screen py-12 md:py-24 bg-[#e8e9ec]`}
             id="about"
         >
             <Title title="Who We Are" />
