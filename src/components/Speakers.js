@@ -26,20 +26,20 @@ export function Speakers() {
                     return (
                         <div
                             key={`speaker-${i + 1}`}
-                            className={`flex flex-col justify-around items-center border-gold_shade border-2 rounded-lg shadow-md shadow-royalBlue min-h-[12rem] md:min-h-[16rem] md:max-h-[16rem] xl:min-h-[16rem] min-w-[15rem] md:min-w-[16rem] xl:min-w-[16rem] max-w-[15rem] md:max-w-[16rem] md:p-2`}
+                            className={`flex flex-col justify-around items-center border-accent border-4 rounded-lg shadow-md shadow-accent min-h-[12rem] md:min-h-[16rem] md:max-h-[16rem] xl:min-h-[16rem] min-w-[15rem] md:min-w-[16rem] xl:min-w-[16rem] max-w-[15rem] md:max-w-[16rem] md:p-2`}
                         >
                             <Image
                                 src={speaker.img}
                                 width={100}
                                 height={20}
                                 alt={speaker.name}
-                                className="w-20 md:w-24 border-4 border-gold_shade rounded-full my-2"
+                                className="w-20 md:w-24 border-4 border-accent rounded-full my-2"
                             />
 
                             <h3 className="my-2 text-lg">{speaker.name}</h3>
                             <h5 className="px-6 my-2 text-center text-base">
                                 {speaker.charge} @{' '}
-                                <span className="text-gold_shade">
+                                <span className="text-gold">
                                     {speaker.company}
                                 </span>
                             </h5>
