@@ -6,6 +6,7 @@ import { sections } from '@/lib'
 import { fonts } from '@/utilities'
 import { Hamburger, Logo } from '@/components'
 import { useMenuStore } from '@/store'
+import Image from 'next/image'
 
 export function Nav(props) {
     const [intersecting, setIntersecting] = useState(true)
@@ -51,24 +52,46 @@ export function Nav(props) {
             <Hamburger />
             {isMenuOpen && (
                 <div
-                    className={`${fonts().rubik.className}  ${classes.nav} 
-                    sm:hidden w-screen h-screen text-lg md:text-primary font-normal`}
+                    className={`${
+                        fonts().rubik.className
+                    } sm:hidden w-64 z-10 fixed inset-0 bg-shade text-lg md:text-primary font-normal ${
+                        isMenuOpen ? 'scale-in-hor-left' : 'slide-left'
+                    } transition-transform duration-300 ease-in-out`}
                 >
-                    <button
-                        onClick={toggleMenu}
-                        className="fixed right-1 top-1"
-                    >
-                        <i className="text-primary text-2xl">
-                            <CgCloseO />
-                        </i>
-                    </button>
+                    <div className="flex justify-between px-3 bg-primary shadow-md">
+                        <div className={`flex flex-col items-center z-100`}>
+                            <Image
+                                alt="LOGO"
+                                src="/img/FOX.png"
+                                width={100}
+                                height={24}
+                                className={`w-8 sm:w-12 md:w-12`}
+                            />
+                            <h3
+                                className={`${
+                                    fonts().press_start_2p.className
+                                } text-[10px] sm:text-xs ${
+                                    props.intersecting
+                                        ? ' text-primary'
+                                        : 'text-shade'
+                                } ml-2`}
+                            >
+                                CryptoFOX
+                            </h3>
+                        </div>
+                        <button onClick={toggleMenu} className="">
+                            <i className="text-2xl text-shade">
+                                <CgCloseO />
+                            </i>
+                        </button>
+                    </div>
                     <ul className="flex flex-col justify-center items-center pt-16">
                         {sections().map((section) => {
                             return (
                                 <li
                                     key={`section-${section}`}
                                     className={`${
-                                        fonts().press_start_2p.className
+                                        fonts().rubik.className
                                     } md:px-3 hover:text-gold_shade py-4 text-primary`}
                                     onClick={toggleMenu}
                                 >

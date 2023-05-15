@@ -8,7 +8,7 @@ export function Logo(props) {
 
     if (!isMenuOpen) {
         return (
-            <div className={`flex flex-col items-center`}>
+            <div className={`flex flex-col items-center z-100`}>
                 <Image
                     alt="LOGO"
                     src="/img/FOX.png"
