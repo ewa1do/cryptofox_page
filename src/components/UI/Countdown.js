@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { DateTime } from 'luxon'
 import { IoCloseCircleOutline } from 'react-icons/io5'
 
@@ -10,7 +10,7 @@ import { useMenuStore } from '@/store'
 export function Countdown() {
     const countdownRef = useRef()
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         const sectionAbout = document.querySelectorAll('.section')[0]
 
         const sectionObserver = new IntersectionObserver(

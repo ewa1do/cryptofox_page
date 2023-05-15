@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { CgCloseO } from 'react-icons/cg'
 import classes from '../styles/header.module.css'
 
@@ -14,7 +14,7 @@ export function Nav(props) {
 
     const navRef = useRef()
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         const home = document.getElementById('home')
         const hero = document.querySelector('.hero')
         const navHeight = navRef?.current?.getBoundingClientRect().height
