@@ -58,6 +58,14 @@ body {
     }
 }
 
+.title {
+    transition: transform 1s, opacity 1s;
+}
+
+.title-fade {
+    opacity: 0;
+}
+
 .countdown {
     transition: transform 1s, opacity 1s;
 }
