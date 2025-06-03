@@ -26,7 +26,7 @@ export function useCountdown(countdownDate) {
             } else {
                 clearInterval(interval)
                 setTimeRemaining(null)
-                setCountdownFinished(true)
+                setCountDownFinished(true)
             }
         }, 1000)
 
